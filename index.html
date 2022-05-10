@@ -139,24 +139,41 @@
         */
   
         const paintItGreen = function () {
-          //
+          let ulBgColor = document.querySelectorAll('ul')
+          for (let i=0; i<ulBgColor.length; i++)
+          {
+              ulBgColor[i].style.backgroundColor = 'green'
+          }
         };
+        //paintItGreen();
+    
   
         /* EXERCISE 9
          Make the heading of the page change color every time the user clicks on it.
         */
-  
+        let heading = document.querySelector("h1")
         const makeItClickable = function () {
-          //
-        };
-  
+
+           
+            const red = Math.round(Math.random() * 255);
+            const green = Math.round(Math.random() * 255);
+            const blue = Math.round(Math.random() * 255);
+            heading.style.color="rgb(" + red + ", " + green + ", " + blue + ")";
+            
+        }
+       
+       //heading.addEventListener('click', function(event){})
+       heading.addEventListener('click', makeItClickable)// event => auto passed down as the 1st parameter
         /* EXERCISE 10
          Change the footer text with something else when the user clicks on it.
         */
-  
+        let changeFooter = document.querySelectorAll('h2')[1]
         const changeFooterText = function () {
-          //
+            changeFooter.innerText = 'This is a different text'
+            
+
         };
+        changeFooter.addEventListener('click', changeFooterText)
   
         /* EXERCISE 11
          Attach an event listener to the input field in the page for console logging its value just after any keystroke.
@@ -170,8 +187,9 @@
         */
   
         window.onload = function () {
-          //
+            alert("Hello, welcome to my Webpage")
         };
+        
   
         /* EXERCISE 13
          Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
