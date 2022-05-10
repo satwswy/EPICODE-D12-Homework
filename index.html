@@ -117,8 +117,12 @@
         */
   
         const addParagraph = function (content) {
-          //
+            let firstDivWithParagraph = document.querySelectorAll('div > p')[0]
+            let paragraphTwo = document.createElement('p')
+            paragraphTwo.innerText = content
+            firstDivWithParagraph.appendChild(paragraphTwo);
         };
+        //addParagraph('Hey i am paragraph2')
   
         /* EXERCISE 7
          Write a function for making the first unordered list disappear.
